@@ -1,0 +1,10 @@
+function cb (callback) {
+    return callback()
+}
+
+
+function callback() {
+    console.log('I am a call back');
+}
+
+cb(callback);
