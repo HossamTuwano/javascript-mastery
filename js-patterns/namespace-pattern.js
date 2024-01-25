@@ -47,4 +47,4 @@ MYAPP.namespace = function (ns_string) {
 
 //assign returned values to local var
 var module2 = MYAPP.namespace('MYAPP.modules.modules2')
-module2 === MYAPP.modules.module2; // true
+module2 === MYAPP.modules.module2 // true
