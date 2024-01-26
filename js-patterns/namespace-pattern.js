@@ -48,3 +48,11 @@ MYAPP.namespace = function (ns_string) {
 //assign returned values to local var
 var module2 = MYAPP.namespace('MYAPP.modules.modules2')
 module2 === MYAPP.modules.module2 // true
+
+// skip initial MYAPP
+var module2  = MYAPP.namespace('module.module51')
+
+// long namespace 
+MYAPP.namespace('once.upon.a.time.there.was.this.long.nested.property')
+
+
