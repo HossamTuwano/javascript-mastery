@@ -52,4 +52,48 @@ specs.price = 'free'
 
 console.dir(toy.getSpecs())
 
+// privilaged private object literals
+// implement private and privilaged methods on object literals instead of function
 
+var myobj //the object
+;(function () {
+  var name = 'my, oh my'
+  // notice no var
+  myobj = {
+    getName: function () {
+      return name
+    },
+  }
+})()
+myobj.getName() // 'my oh my'
+
+// alternative implementation
+
+var myobj2 = (function () {
+  var name = 'my, oh my'
+
+  return {
+    getName: function () {
+      return name
+    },
+  }
+})()
+
+myobj2.getName() // 'my, oh my'
+
+// prototype and privacy
+
+Gadget.prototype = (function () {
+  // provate members
+  var browser = 'Mobile Webkit'
+  // public prototype member
+  return {
+    getBrowser: function () {
+      return browser
+    },
+  }
+})()
+
+var toy = new Gadget()
+console.log(toy.getName()) // privileged "own" method
+console.log(toy.getBrowser()) // privileged prototype method
