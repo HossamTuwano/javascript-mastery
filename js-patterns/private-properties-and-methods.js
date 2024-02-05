@@ -126,8 +126,9 @@ var myarray
   }
 })()
 
+myarray.isArray([1, 2]) // true
+myarray.isArray({ 0: 1 }) // false
+myarray.indexOf(['a', 'b', 'z'], 'z') // 2
+myarray.inArray(['a', 'b', 'z'], 'z') // 2
 
-myarray.isArray([1,2]); // true
-myarray.isArray({0: 1}); // false
-myarray.indexOf(["a", "b", "z"], "z"); // 2
-myarray.inArray(["a", "b", "z"], "z"); // 2
+// the module pattern
