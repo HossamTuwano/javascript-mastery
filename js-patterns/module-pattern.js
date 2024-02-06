@@ -73,3 +73,31 @@ MYAPP.utilities.array = (function () {
     // more methods and properties
   }
 })()
+
+// revealing module pattern
+MYAPP.utilities.array = (function () {
+  // private property
+  var array_string = '[object Array]',
+    ops = Object.prototype.toString,
+    // private method
+
+    inArray = function (haystack, needle) {
+      for (var i = 0, max = haystack.length; i < max; i += 1) {
+        if (haystack[i] === needle) {
+          return i
+        }
+      }
+      return -1
+    },
+    isArray = function (a) {
+      return ops.call(a) === array_string
+    }
+
+  // revealing public API
+  return {
+    isArray: isArray,
+    indexOf: inArray,
+  }
+})()
+
+// modules that can create constructors
