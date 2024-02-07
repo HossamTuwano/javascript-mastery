@@ -101,3 +101,37 @@ MYAPP.utilities.array = (function () {
 })()
 
 // modules that can create constructors
+MYAPP.namespace('MYAPP.utilities.Array')
+
+MYAPP.utilities.Array = (function () {
+  // dependencies
+  var uobj = MYAPP.utilities.object,
+    ulang = MYAPP.utilities.lang,
+    // private properties and methods...
+    Constr
+
+  // end var
+
+  // optionally one-time init procedures
+  // ...
+
+  // public API -- constructor
+  Constr = function (o) {
+    // public API -- prototype
+  }
+
+  Constr.prototype = {
+    constructor: MYAPP.utilities.Array,
+    version: '2.0',
+    toArray: function (obj) {
+      for (var i = 0, a = [], len = obj.length; i < len; i += 1) {
+        a[i] = obj[i]
+      }
+      return a
+    },
+  }
+
+  // return the constructor
+  // to be assigned to the new namespace
+  return Constr
+})()
