@@ -135,3 +135,16 @@ MYAPP.utilities.Array = (function () {
   // to be assigned to the new namespace
   return Constr
 })()
+
+// the way to use this constructor will be like so
+var arr = new MYAPP.utilities.Array(obj)
+
+//importing globals into modules
+MYAPP.utilities.module = (function (app, global) {
+  // references to the global object
+  // and to the global app namespace object
+  // are now localized
+})(MYAPP, this)
+
+
+
