@@ -1,0 +1,1 @@
+new Sandbox(function (box) {})
