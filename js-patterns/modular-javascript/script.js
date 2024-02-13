@@ -21,9 +21,15 @@ var people = (function () {
     $input.val('')
   }
 
-  function deletePerson(e) {
-    var remove = $(e.target).closest('li')
-    var i = this.$ul.find('li').index(remove)
+  function deletePerson(event) {
+    if (typeof event === 'number') {
+      i = event
+    } else {
+      var remove = $(event.target).closest('li')
+      var i = this.$ul.find('li').index(remove)
+    }
+    people.slice(i, 1)
+    render()
   }
 
   return {
