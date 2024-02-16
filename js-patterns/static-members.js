@@ -1,14 +1,24 @@
-// public static members
+var Gadget = function () {
+    
+}
 
-// constructor
-var Gadget = function () {}
-
-// a static method
 Gadget.isShiny = function () {
-  return 'you bet'
+    return 'You bet'
 }
 
-// a normal method added to the prototype
 Gadget.prototype.setPrice = function (price) {
-  this.price = price
+    this.price = price;
 }
+
+//  calling a staic method
+Gadget.isShiny(); // 'you bet'
+
+// createing an instance and calling method
+var iphone = new Gadget();
+iphone.setPrice(500);
+
+typeof Gadget.setPrice; // 'undefined'
+typeof iphone.isShiny; // 'undefined'
+
+Gadget.prototype.isShiny = Gadget.isShiny;
+iphone.isShiny() //'you bet'
