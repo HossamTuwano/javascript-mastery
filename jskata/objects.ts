@@ -7,3 +7,12 @@ const entries: [string, string][] = Object.entries(arr)
 const fromEntries = Object.fromEntries(entries)
 
 console.log(fromEntries) // {0: 'key', 1: 'value' }
+
+// kata hyah
+const entry1: string[] = ['key', 'value']
+
+const entry2: string[] = ['key1', 'value 1']
+
+const fromEntry1Entry2: object = Object.fromEntries([entry1, entry2])
+
+console.log(fromEntry1Entry2) // {key: 'value', key1: 'value 1'}
