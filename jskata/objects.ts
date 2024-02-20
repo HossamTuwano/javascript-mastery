@@ -15,4 +15,10 @@ const entry2: string[] = ['key1', 'value 1']
 
 const fromEntry1Entry2: object = Object.fromEntries([entry1, entry2])
 
-console.log(fromEntry1Entry2) // {key: 'value', key1: 'value 1'}
+console.log(fromEntry1Entry2)
+// {key: 'value', key1: 'value 1'}
+
+const entry1Object = { 1: 'key', 2: 'value' }
+const entry2Object = { key1: 'value 1' }
+
+// should return  {key: 'value', key1: 'value 1'}
