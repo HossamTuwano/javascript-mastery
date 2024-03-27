@@ -17,4 +17,6 @@ var Person = function (name) {
 // to create and use a new object
 
 var a = new Person('Adam')
-a.getName() // 'Adm'
+a.getName() // 'Adam'
+
+a.setName('Eve').getName(); //Eve
